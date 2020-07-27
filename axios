@@ -1,0 +1,46 @@
+1) 安装
+      npm安装  node、vue/cli
+      cdn
+      
+      
+2)引入
+      js cdn  直接使用
+      模块化
+          js    import axios from 'axios'
+          node  let axios =require('axios')
+
+3)使用
+      别名
+          axios.get()
+          axios.post()
+          axios.put()
+          axios.delete()
+          axios.options()
+      对象化
+          axios({
+              //配置信息
+              method: 'get',                 //请求方式
+              url: 'http://www.baidu.com',
+              data: {}，                       //用于post请求参数
+              params: {}，                     //用于get函数请求参数
+              headers: {},                     //设置头部信息
+              timeout: 1000                    //会话超过1000ms将自动关闭会话
+          )
+      响应数据
+           数据格式
+               {
+               data: {},     //服务器返回的数据
+               status: 200,   //状态码
+               statusText: 'ok'，//服务器返回的状态信息
+               headers: {},   //服务器响应的头部信息
+               config: {},    //配置信息  
+               } 
+4)特性
+      并发
+            axios.all([包含axios的函数1，包含axios的函数2]).then(
+                axios.spread(function(函数1的返回值，函数2的返回值){
+                    //在这里已经完成了两个并发函数
+                })
+            )
+      拦截器
+      错误处理
