@@ -1,0 +1,25 @@
+var arr=[1,2,3,4]
+var arr1=['键盘']
+var arr2=['鼠标']
+
+var join=arr.join('分隔符')         //将数组转换为字符串，可以添加分隔符
+var pop=arr.pop()                  // 删除数组的最后一个元素，并返回删除的值
+var push=arr.push(5,6)               //向数组末尾添加元素，可以添加多个元素
+    arr.unshift(0,1)          //向数组头部添加元素，可以添加多个元素，返回新的数组长度
+var shift=arr.shift()         //删除数组头部的值，并返回弹出的值
+console.log(arr);
+
+//删除数组内的元素
+    delete arr[0]      //删除第一个元素，但是保留元素占位，需要用shift、pop删除元素
+
+arr.splice(0,2,"你好",'这是第一个元素')       //a： 在索引处删除 b个元素，并添加c；c可以是多个元素
+var concat=arr.concat(arr1,arr2)             //不操作源数组，将结果返回给新的数组
+//截取
+var slice=arr.slice(1,4)                       //不操作源数组，将结果返回给新的数组    
+                                                //第一个参数是索引开始位置，第二个是索引结束位置
+var toString=arr.toString()                    //将数组转化为字符串。                                               
+console.log(toString);                          
+console.log(slice);
+console.log(concat);
+console.log(arr);
+    
